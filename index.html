@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>तेजस्वी संग नैनेश - पावन शुभ विवाह निमंत्रण | Ladki Wale Special Edition</title>
+
+    <!-- Meta tags for social sharing -->
+    <meta property="og:title" content="तेजस्वी पंत संग नैनेश ओली - शुभ विवाह निमंत्रण (वधू पक्ष)">
+    <meta property="og:description"
+        content="स्नेह, प्रेम और शुभाशीषों के साथ हम आपको हमारी सुपुत्री तेजस्वी पंत के विवाह समारोह में सादर आमंत्रित करते हैं। 19 एवं 21 नवम्बर 2026, टनकपुर एवं खेतीखान (उत्तराखंड)।">
+    <meta property="og:image" content="assets/wedding-card.png">
+    <meta name="theme-color" content="#831843">
+
+    <!-- Google Fonts for Divine Indian & Royal Pahadi Wedding Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Great+Vibes&family=Kalam:wght@400;700&family=Noto+Serif+Devanagari:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Rozha+One&family=Yatra+One&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-textured">
+
+    <!-- Flower Petal Shower Canvas -->
+    <canvas id="petal-canvas"></canvas>
+
+    <!-- ============================================================
+         ROYAL ENVELOPE OPENER MODAL (First view when opening website)
+         ============================================================ -->
+    <div id="envelope-overlay" class="envelope-overlay">
+        <div class="envelope-card">
+            <div class="wax-seal">
+                <span>ॐ</span>
+            </div>
+            <div class="mantra-text" style="color: #831843; font-size: 1.25rem; font-weight: bold;">
+                ॥ श्री गणेशाय नमः ॥
+            </div>
+            <p style="font-size: 0.95rem; color: #6e4252; margin: 8px 0 16px;">
+                स्नेह, वात्सल्य और शुभाशीषों से परिपूर्ण निमंत्रण पत्र (कन्या पक्ष)
+            </p>
+            <div
+                style="border-top: 1px dashed #d4af37; border-bottom: 1px dashed #d4af37; padding: 12px 0; margin-bottom: 16px;">
+                <h2 style="font-family: var(--font-heading); color: #831843; font-size: 1.85rem; margin-bottom: 4px;">
+                    तेजस्वी <span style="color: #c8963e; font-size: 1.4rem;">संग</span> नैनेश
+                </h2>
+                <div style="font-size: 0.88rem; color: #be185d; font-weight: 600; letter-spacing: 1px;">
+                    टनकपुर एवं खेतीखान (उत्तराखंड) • 19 एवं 21 नवम्बर 2026
+                </div>
+            </div>
+            <button id="open-invitation-btn" class="envelope-open-btn">
+                <span>💌</span>
+                <span>शुभ निमंत्रण पत्र खोलें</span>
+                <span>✨</span>
+            </button>
+            <p style="font-size: 0.8rem; color: #be185d; margin-top: 14px; font-weight: 500;">
+                (विवाह मंगल गीत: "आज से तेरी" संग पावन घंटी ध्वनि)
+            </p>
+        </div>
+    </div>
+
+    <!-- Background Music Audio Element ("आज से तेरी" - Padman) -->
+    <audio id="wedding-bg-audio" src="assets/bg-music.mp4" loop preload="auto"></audio>
+
+    <!-- ============================================================
+         ROYAL TOP NAVIGATION BAR
+         ============================================================ -->
+    <header class="royal-nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                        fill="#f43f5e" />
+                </svg>
+                <span>तेजस्वी संग नैनेश</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn music-toggle music-toggle-btn" title="संगीत चालू / बंद">
+                    <span class="music-pulse"></span>
+                    <span class="music-toggle-label">संगीत बजाएं</span>
+                </button>
+                <a href="#" class="nav-btn open-card-modal-btn" title="मूल कार्ड देखें">
+                    <span>📜 मूल कार्ड</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Traditional Aipan Top Border -->
+    <div class="aipan-border-top" style="margin-top: 52px;"></div>
+
+    <!-- ============================================================
+         HERO SECTION: ROYAL BRIDAL MANDAP
+         ============================================================ -->
+    <section id="hero" class="hero-section">
+
+        <div class="hero-glass-card">
+            <!-- Divine Ganesha Silhouette -->
+            <div class="hero-ganesh">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="48" fill="#831843" stroke="#e5b84c" stroke-width="3" />
+                    <path
+                        d="M50 18C44 18 41 23 41 27C41 33 46 35 48 38C50 41 50 45 47 49C44 53 39 52 36 50C34 49 32 50 32 52C32 54 34 56 38 57C43 58 48 56 51 52C54 48 54 42 52 38C50 34 47 33 47 28C47 25 48 23 51 23C54 23 57 26 58 30C59 34 58 40 59 45C60 52 64 57 70 57C74 57 77 54 77 50C77 46 74 44 71 44C68 44 66 46 66 48C66 50 67 51 69 51C70 51 71 50 71 49C71 47 70 46 68 47C66 48 64 45 64 42C64 36 67 30 64 25C61 20 56 18 50 18Z"
+                        fill="#f7e1a0" />
+                    <circle cx="56" cy="28" r="2" fill="#fff" />
+                    <path d="M47 24C48 22 52 22 53 24C53 27 50 29 50 31C50 29 47 27 47 24Z" fill="#dc2626" />
+                    <circle cx="34" cy="55" r="3" fill="#f59e0b" />
+                </svg>
+            </div>
+
+            <div class="mantra-text">॥ श्री गणेशाय नमः ॥</div>
+
+            <div class="mantra-subtext">
+                मंगलम भगवान विष्णु, मंगलम गरुड़ध्वजः ।<br>
+                मंगलम पुण्डरीकाक्ष, मंगलाय तनो हरिः ॥
+            </div>
+
+            <div class="shubh-vivah-badge">👰 वधू पक्ष • पावन परिणय आमंत्रण 👰</div>
+
+            <h1 class="hero-title">
+                तेजस्वी <span>संग</span> नैनेश
+            </h1>
+            <div class="hero-subtitle">शुभ विवाह महोत्सव • 19 एवं 21 नवम्बर 2026</div>
+
+            <div
+                style="font-family: var(--font-heading); color: #fde68a; font-size: 1rem; letter-spacing: 2px; margin: 8px auto 14px;">
+                ✦ ॐ श्रीं लक्ष्मीनारायणाय नमः ✦
+            </div>
+
+            <p style="max-width: 580px; margin: 0 auto 22px; font-size: 0.98rem; color: #fff7ed; line-height: 1.7;">
+                परमपिता परमेश्वर की असीम अनुकम्पा से हमारी प्रिय लाडली सुपुत्री <strong>तेजस्वी पंत</strong> के
+                मांगलिक परिणय उत्सव में आप सभी स्वजनों व स्नेहीजनों का सप्रेम व सादर आमंत्रण है।
+            </p>
+
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <a href="#rituals" class="btn-primary">
+                    <span>🪔 मांगलिक रस्में</span>
+                </a>
+                <a href="#venue" class="btn-secondary">
+                    <span>📍 पावन स्थल दर्शन</span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ============================================================
+         COUPLE SECTION: BRIDE (तेजस्वी) & GROOM (नैनेश)
+         ============================================================ -->
+    <section id="couple" class="couple-section fade-in-up">
+
+        <div class="section-label">
+            <span>⚜️</span> पावन परिणय सूत्र <span>⚜️</span>
+        </div>
+        <h2 class="section-title" style="text-align: center; margin-bottom: 24px;">वधू - वर पावन परिचय</h2>
+
+        <div class="couple-wrapper">
+
+            <!-- BRIDE CARD (वधू - तेजस्वी पंत) FIRST & PROMINENT -->
+            <div class="couple-card">
+                <span class="role-tag" style="background: var(--rani-royal);">वधू (Bride)</span>
+
+                <div class="couple-avatar-frame" style="background: linear-gradient(135deg, #f43f5e 0%, #fbbf24 100%);">
+                    <div class="couple-avatar-inner">
+                        <!-- Pahadi Bride Illustration with Pichora & Traditional Nath -->
+                        <svg viewBox="0 0 120 120" width="100%" height="100%">
+                            <rect width="120" height="120" fill="#fdfbf7" />
+                            <circle cx="60" cy="60" r="50" fill="#ffe4e6" />
+                            <!-- Bride Attire (Rani Pink Lehenga & Gold Jewelry) -->
+                            <path d="M25 120 C25 85, 45 78, 60 78 C75 78, 95 85, 95 120 Z" fill="#9d174d" />
+                            <path d="M46 78 C52 92, 68 92, 74 78 Z" fill="#fbbf24" />
+                            <!-- Heavy Bridal Necklace (Guloband) -->
+                            <path d="M48 76 C55 84, 65 84, 72 76" stroke="#d97706" stroke-width="3" fill="none" />
+                            <circle cx="60" cy="82" r="3" fill="#be185d" />
+                            <!-- Face -->
+                            <rect x="53" y="65" width="14" height="15" fill="#fbcfe8" rx="4" />
+                            <ellipse cx="60" cy="52" rx="16" ry="20" fill="#fed7aa" />
+                            <!-- Eyes with Bridal Kohl & Bindi -->
+                            <circle cx="53" cy="51" r="2" fill="#1f2937" />
+                            <circle cx="67" cy="51" r="2" fill="#1f2937" />
+                            <circle cx="60" cy="43" r="2" fill="#be185d" /> <!-- Bindi -->
+                            <path d="M56 61 Q60 65 64 61" stroke="#be123c" stroke-width="2" fill="none" />
+                            <!-- Traditional Uttarakhand Royal Nath -->
+                            <circle cx="52" cy="54" r="9" stroke="#d97706" stroke-width="1.8" fill="none" />
+                            <circle cx="43" cy="54" r="2" fill="#be185d" />
+                            <circle cx="44" cy="50" r="1.5" fill="#fff" />
+                            <!-- Sacred Pichora (रंगवाली पिछौड़ा - Saffron with red dots) -->
+                            <path
+                                d="M34 32 C38 20, 82 20, 86 32 C92 48, 92 75, 88 95 C82 72, 80 50, 78 40 C65 32, 55 32, 42 40 C40 50, 38 72, 32 95 C28 75, 28 48, 34 32 Z"
+                                fill="#f59e0b" />
+                            <!-- Pichora Red Dots (Iconic Kumaoni design) -->
+                            <circle cx="48" cy="28" r="2.2" fill="#9d174d" />
+                            <circle cx="60" cy="26" r="2.2" fill="#9d174d" />
+                            <circle cx="72" cy="28" r="2.2" fill="#9d174d" />
+                            <circle cx="40" cy="44" r="2" fill="#9d174d" />
+                            <circle cx="80" cy="44" r="2" fill="#9d174d" />
+                            <circle cx="36" cy="62" r="2" fill="#9d174d" />
+                            <circle cx="84" cy="62" r="2" fill="#9d174d" />
+                            <path d="M34 32 C38 20, 82 20, 86 32" stroke="#be185d" stroke-width="2.5" fill="none" />
+                        </svg>
+                    </div>
+                </div>
+
+                <h3 class="person-name">तेजस्वी पंत</h3>
+
+                <div class="parents-detail">
+                    <strong>माता-पिता</strong>
+                    सुपुत्री श्रीमती मीना पंत<br>
+                    एवं श्री मनोज पंत
+                </div>
+            </div>
+
+            <!-- SACRED CONNECTOR / KNOT -->
+            <div class="couple-divider">
+                <div class="sacred-knot">
+                    <span>और</span>
+                </div>
+                <div
+                    style="font-family: var(--font-heading); color: var(--rani-royal); font-size: 1.15rem; margin-top: 8px; font-weight: bold;">
+                    संग
+                </div>
+                <div style="color: var(--gold-royal); font-size: 0.85rem; letter-spacing: 1px;">
+                    पावन परिणय
+                </div>
+            </div>
+
+            <!-- GROOM CARD (वर - नैनेश ओली) -->
+            <div class="couple-card">
+                <span class="role-tag" style="background: #991b1b;">वर (Groom)</span>
+
+                <div class="couple-avatar-frame">
+                    <div class="couple-avatar-inner">
+                        <!-- Pahadi Groom Illustration with Topi & Sherwani -->
+                        <svg viewBox="0 0 120 120" width="100%" height="100%">
+                            <rect width="120" height="120" fill="#fdfbf7" />
+                            <!-- Background glow -->
+                            <circle cx="60" cy="60" r="50" fill="#fef3c7" />
+                            <!-- Groom Body/Sherwani in Crimson & Gold -->
+                            <path d="M25 120 C25 85, 45 78, 60 78 C75 78, 95 85, 95 120 Z" fill="#991b1b" />
+                            <path d="M48 78 L60 120 L72 78 Z" fill="#e5b84c" />
+                            <!-- Sherwani stole -->
+                            <path d="M38 88 C45 98, 50 115, 50 120" stroke="#fef08a" stroke-width="4" fill="none" />
+                            <path d="M82 88 C75 98, 70 115, 70 120" stroke="#fef08a" stroke-width="4" fill="none" />
+                            <!-- Neck & Face -->
+                            <rect x="52" y="65" width="16" height="18" fill="#fbcfe8" rx="4" />
+                            <ellipse cx="60" cy="52" rx="18" ry="22" fill="#fed7aa" />
+                            <!-- Eyes, Smile, Tilak -->
+                            <circle cx="53" cy="50" r="2" fill="#451a03" />
+                            <circle cx="67" cy="50" r="2" fill="#451a03" />
+                            <path d="M56 60 Q60 64 64 60" stroke="#7c2d12" stroke-width="1.8" fill="none" />
+                            <!-- Chandan / Red Tilak -->
+                            <path d="M59 38 L61 38 L61 46 L59 46 Z" fill="#dc2626" />
+                            <circle cx="60" cy="36" r="1.5" fill="#f59e0b" />
+                            <!-- Uttarakhand Pahadi Topi -->
+                            <path d="M38 42 C38 28, 82 28, 82 42 Z" fill="#7f1d1d" />
+                            <rect x="36" y="38" width="48" height="7" rx="3" fill="#e5b84c" />
+                            <path d="M37 41 L83 41" stroke="#16a34a" stroke-width="2" stroke-dasharray="3,2" />
+                        </svg>
+                    </div>
+                </div>
+
+                <h3 class="person-name">नैनेश ओली</h3>
+
+                <div class="parents-detail">
+                    <strong>माता-पिता</strong>
+                    सुपुत्र श्रीमती देवकी देवी<br>
+                    एवं श्री मोहन चंद्र ओली
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sacred Invitation Blessing Box -->
+        <div
+            style="text-align: center; max-width: 680px; margin: 30px auto 0; padding: 18px 20px; background: #fff; border-radius: 18px; border: 1.5px solid var(--gold-royal); box-shadow: var(--shadow-soft);">
+            <p
+                style="font-family: var(--font-heading); color: var(--rani-deep); font-size: 1.15rem; line-height: 1.8;">
+                "हमारी लाडली सुपुत्री तेजस्वी के पावन परिणय बंधन में आप सभी की गरिमामयी उपस्थिति हमारे लिए अनमोल होगी। कृपया पधारकर नवदंपति को शुभाशीष प्रदान करें।"
+            </p>
+        </div>
+
+    </section>
+
+    <!-- ============================================================
+         COUNTDOWN TIMER SECTION
+         ============================================================ -->
+    <section class="countdown-section fade-in-up">
+        <div class="section-label">
+            <span>⏳</span> शुभ घड़ी <span>⏳</span>
+        </div>
+        <h2 class="section-title">मांगलिक उत्सव आरंभ में शेष समय</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+            उत्सव का शुभारंभ: <strong>19 नवम्बर 2026, शाम 04:00 बजे (संगीत संध्या)</strong>
+        </p>
+
+        <div class="countdown-grid">
+            <div class="countdown-box">
+                <span id="days" class="countdown-num">00</span>
+                <span class="countdown-txt">दिन</span>
+            </div>
+            <div class="countdown-box">
+                <span id="hours" class="countdown-num">00</span>
+                <span class="countdown-txt">घंटे</span>
+            </div>
+            <div class="countdown-box">
+                <span id="minutes" class="countdown-num">00</span>
+                <span class="countdown-txt">मिनट</span>
+            </div>
+            <div class="countdown-box">
+                <span id="seconds" class="countdown-num">00</span>
+                <span class="countdown-txt">सेकंड</span>
+            </div>
+        </div>
+
+        <div style="margin-top: 18px;">
+            <button onclick="addToCalendarMain()" class="calendar-action-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                <span>Google Calendar में संपूर्ण उत्सव जोड़ें</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SCROLLYTELLING: CEREMONIES TIMELINE (19 & 21 NOVEMBER)
+         ============================================================ -->
+    <section id="rituals" class="rituals-section fade-in-up">
+
+        <div class="rituals-intro">
+            <div class="section-label">
+                <span>🪔</span> मांगलिक कार्यक्रम <span>🪔</span>
+            </div>
+            <h2 class="section-title">मांगलिक कार्यक्रम एवं समय-सारणी</h2>
+            <p style="color: var(--text-muted); max-width: 580px; margin: 0 auto; font-size: 0.95rem;">
+                लाडली तेजस्वी के परिणय अनुष्ठानों की पावन तिथियां। किसी भी रस्म पर क्लिक करके उसका विवरण एवं कैलेंडर रिमाइंडर देखें।
+            </p>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <!-- RASAM 1: SANGEET CEREMONY (19 NOV, 4:00 PM, CHHINI GOTH TANAKPUR) -->
+            <div class="ritual-item" data-ritual-key="sangeet">
+                <div class="ritual-node" style="border-color: #a855f7; background: #f3e8ff;">
+                    <span style="font-size: 1.25rem;">💃</span>
+                </div>
+                <div class="ritual-card ritual-sangeet">
+                    <span class="ritual-badge">रस्म १ • सुरमयी संध्या</span>
+                    <h3 class="ritual-title" style="color: #6b21a8;">महिला संगीत एवं सांस्कृतिक संध्या</h3>
+                    <div class="ritual-meta">
+                        <span class="meta-pill" style="border-color: #a855f7; color: #6b21a8;">📅 19 नवम्बर 2026</span>
+                        <span class="meta-pill" style="border-color: #a855f7; color: #6b21a8;">⏰ शाम 04:00 बजे</span>
+                        <span class="meta-pill meta-pill-venue">📍 छीनी गोठ, टनकपुर</span>
+                    </div>
+                    <span class="ritual-highlight" style="color: #7e22ce;">"॥ आनंदो वर्धते नित्यं, मंगलं भवतु सर्वदा ॥"</span>
+                    <p class="ritual-desc">
+                        पारंपरिक कुमाऊंनी मांगलिक गीतों की मधुर झंकार, ढोलक की थाप, हंसी-उल्लास और नृत्य से सजी सुरमयी संध्या। सपरिवार पधारकर उत्सव को अविस्मरणीय बनाएं।
+                    </p>
+                    <div class="ritual-footer">
+                        <span style="color: #6b21a8; font-weight: 500;">💃 लोकगीत, नृत्य एवं उल्लास संध्या</span>
+                        <span class="tap-details-hint" style="color: #7e22ce;">विस्तृत विवरण →</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RASAM 2: MEHENDI CEREMONY (19 NOV, 8:00 PM, CHHINI GOTH TANAKPUR) -->
+            <div class="ritual-item" data-ritual-key="mehendi">
+                <div class="ritual-node" style="border-color: #16a34a; background: #dcfce7;">
+                    <span style="font-size: 1.25rem;">🌿</span>
+                </div>
+                <div class="ritual-card ritual-mehendi">
+                    <span class="ritual-badge">रस्म २ • सगुन की मेहंदी</span>
+                    <h3 class="ritual-title" style="color: #166534;">सगुन मेहंदी एवं हिना उत्सव</h3>
+                    <div class="ritual-meta">
+                        <span class="meta-pill" style="border-color: #22c55e; color: #166534;">📅 19 नवम्बर 2026</span>
+                        <span class="meta-pill" style="border-color: #22c55e; color: #166534;">⏰ रात 08:00 बजे</span>
+                        <span class="meta-pill meta-pill-venue">📍 छीनी गोठ, टनकपुर</span>
+                    </div>
+                    <span class="ritual-highlight" style="color: #15803d;">"॥ ॐ श्रीं ह्रीं क्लीं सौभाग्यवर्धिन्यै नमः ॥"</span>
+                    <p class="ritual-desc">
+                        वधू तेजस्वी के कर-कमलों में सौभाग्य, स्नेह और सुहाग की सगुन मेहंदी रचने की इस मनोरम संध्या में आप सभी स्वजनों व सखियों की उपस्थिति सादर प्रार्थनीय है।
+                    </p>
+                    <div class="ritual-footer">
+                        <span style="color: #166534; font-weight: 500;">🌿 सगुन हिना सज्जा एवं सुहाग उत्सव</span>
+                        <span class="tap-details-hint" style="color: #15803d;">विस्तृत विवरण →</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RASAM 3: HALDI CEREMONY (21 NOV, 6:00 AM, KHETIKHAN TALLI BAZAR) -->
+            <div class="ritual-item" data-ritual-key="haldi">
+                <div class="ritual-node" style="border-color: #f59e0b; background: #fef3c7;">
+                    <span style="font-size: 1.25rem;">🟡</span>
+                </div>
+                <div class="ritual-card ritual-haldi">
+                    <span class="ritual-badge">रस्म ३ • शुभ हल्दी संस्कार</span>
+                    <h3 class="ritual-title" style="color: #92400e;">हल्दी लेपन एवं पावन उबटन संस्कार</h3>
+                    <div class="ritual-meta">
+                        <span class="meta-pill" style="border-color: #f59e0b; color: #92400e;">📅 21 नवम्बर 2026</span>
+                        <span class="meta-pill" style="border-color: #f59e0b; color: #92400e;">⏰ सुबह 06:00 बजे</span>
+                        <span class="meta-pill meta-pill-venue">📍 खेतीखान, तल्ली बाज़ार</span>
+                    </div>
+                    <span class="ritual-highlight" style="color: #b45309;">"॥ ॐ भद्रं कर्णेभिः शृणुयाम देवा भद्रं पश्येमाक्षभिर्यजत्राः ॥"</span>
+                    <p class="ritual-desc">
+                        मांगलिक हल्दी लेपन एवं पावन उबटन संस्कार की शुभ प्रभात वेला में कन्या तेजस्वी को अपने स्नेह, वात्सल्य एवं शुभाशीषों से परिपूर्ण करने हेतु आप सादर आमंत्रित हैं।
+                    </p>
+                    <div class="ritual-footer">
+                        <span style="color: #92400e; font-weight: 500;">🪔 केसर-हल्दी उबटन एवं कलश पूजन</span>
+                        <span class="tap-details-hint" style="color: #b45309;">विस्तृत विवरण →</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RASAM 4: MAIN WEDDING & PHERE (21 NOV, 12:00 PM, KHETIKHAN TALLI BAZAR) -->
+            <div class="ritual-item" data-ritual-key="wedding">
+                <div class="ritual-node" style="border-color: #be185d; background: #ffe4e6;">
+                    <span style="font-size: 1.25rem;">🔥</span>
+                </div>
+                <div class="ritual-card ritual-wedding">
+                    <span class="ritual-badge">रस्म ४ • महा मिलन (मुख्य विवाह संस्कार)</span>
+                    <h3 class="ritual-title" style="color: var(--rani-deep);">शुभ विवाह - पाणिग्रहण व सप्तपदी</h3>
+                    <div class="ritual-meta">
+                        <span class="meta-pill" style="border-color: #be185d; color: var(--rani-deep);">📅 21 नवम्बर 2026</span>
+                        <span class="meta-pill" style="border-color: #be185d; color: var(--rani-deep);">⏰ दिन में 12:00 बजे (दोपहर)</span>
+                        <span class="meta-pill meta-pill-venue">📍 खेतीखान, तल्ली बाज़ार</span>
+                    </div>
+                    <span class="ritual-highlight" style="color: var(--rani-royal);">"॥ यदेतद्धृदयं तव तदस्तु हृदयं मम, यदिदं हृदयं मम तदस्तु हृदयं तव ॥"</span>
+                    <p class="ritual-desc">
+                        पवित्र वैदिक अग्नि को साक्षी मानकर, कन्यादान, सप्तपदी (सात फेरे) एवं पाणिग्रहण संस्कार के साथ दो पवित्र आत्माओं का अमर गठबंधन संपन्न होगा।
+                    </p>
+                    <div class="ritual-footer">
+                        <span style="color: var(--rani-deep); font-weight: 500;">🔥 वैदिक मंत्रोच्चार, वरमाला व सप्तपदी</span>
+                        <span class="tap-details-hint">पवित्र सात वचन देखें →</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ============================================================
+         VENUE SECTION (दो पावन विवाह स्थल: टनकपुर एवं खेतीखान)
+         ============================================================ -->
+    <section id="venue" class="venue-section fade-in-up">
+
+        <div class="section-label">
+            <span>📍</span> पावन स्थल दर्शन <span>📍</span>
+        </div>
+        <h2 class="section-title" style="text-align: center;">समारोह स्थल एवं मार्ग दर्शन</h2>
+        <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 20px;">
+            कार्यक्रम दोनों पावन स्थलों पर संपन्न होंगे। कृपया अपनी सुविधानुसार पधारकर नवदंपति को आशीर्वाद दें।
+        </p>
+
+        <div class="venues-grid">
+
+            <!-- VENUE 1: CHHINI GOTH, TANAKPUR -->
+            <div class="venue-card-main">
+                <div>
+                    <div class="venue-icon-circle">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
+
+                    <span class="venue-badge">स्थल १ • संगीत एवं मेहंदी (19 नवम्बर)</span>
+
+                    <h3 class="venue-heading">छीनी गोठ, टनकपुर</h3>
+
+                    <div class="venue-address-box">
+                        <div style="font-size: 1.15rem; font-family: var(--font-heading); color: var(--rani-deep); margin-bottom: 4px;">
+                            निवास: <strong>छीनी गोठ</strong>
+                        </div>
+                        <div style="font-size: 1rem; color: #78350f; font-weight: 600;">
+                            <span>टनकपुर, जिला - चम्पावत (उत्तराखंड)</span>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 0.92rem; color: var(--rani-royal); margin-bottom: 16px; line-height: 1.6;">
+                        <strong>कार्यक्रम:</strong><br>
+                        • 19 नवम्बर, शाम 04:00 बजे - महिला संगीत संध्या<br>
+                        • 19 नवम्बर, रात 08:00 बजे - सगुन की मेहंदी उत्सव
+                    </p>
+                </div>
+
+                <div class="venue-btn-group">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Chhini+Goth,+Tanakpur,+Uttarakhand" target="_blank"
+                        class="btn-primary" style="font-size: 0.9rem;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="3 11 22 2 13 21 11 13 3 11" />
+                        </svg>
+                        <span>छीनी गोठ (टनकपुर) मैप देखें</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- VENUE 2: KHETIKHAN, TALLI BAZAR -->
+            <div class="venue-card-main">
+                <div>
+                    <div class="venue-icon-circle" style="color: #b45309;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
+
+                    <span class="venue-badge" style="background: #fef3c7; color: #92400e;">स्थल २ • हल्दी एवं विवाह (21 नवम्बर)</span>
+
+                    <h3 class="venue-heading">खेतीखान, तल्ली बाज़ार</h3>
+
+                    <div class="venue-address-box">
+                        <div style="font-size: 1.15rem; font-family: var(--font-heading); color: var(--rani-deep); margin-bottom: 4px;">
+                            स्थान: <strong>तल्ली बाज़ार, खेतीखान</strong>
+                        </div>
+                        <div style="font-size: 1rem; color: #78350f; font-weight: 600;">
+                            <span>खेतीखान (उत्तराखंड)</span>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 0.92rem; color: var(--rani-royal); margin-bottom: 16px; line-height: 1.6;">
+                        <strong>कार्यक्रम:</strong><br>
+                        • 21 नवम्बर, सुबह 06:00 बजे - शुभ हल्दी संस्कार<br>
+                        • 21 नवम्बर, दिन में 12:00 बजे - मुख्य शुभ विवाह व सप्तपदी
+                    </p>
+                </div>
+
+                <div class="venue-btn-group">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Khetikhan+Talli+Bazar,+Uttarakhand" target="_blank"
+                        class="btn-primary" style="font-size: 0.9rem;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="3 11 22 2 13 21 11 13 3 11" />
+                        </svg>
+                        <span>खेतीखान (तल्ली बाज़ार) मैप देखें</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ============================================================
+         BAL AGRAH SECTION (SPECIAL FEATURE: DIVYA PANT - LADDU)
+         ============================================================ -->
+    <section id="bal-agrah" class="bal-agrah-section fade-in-up">
+        <div class="bal-agrah-container">
+            <div class="bal-agrah-badge">
+                <span>🌸</span> बाल आग्रह - नन्हे-मुन्नों का स्नेहिल निमंत्रण <span>🌸</span>
+            </div>
+
+            <div class="bal-agrah-poem-box">
+                <blockquote class="bal-agrah-poem">
+                    "हल्दी है, चन्दन है, रिश्तों का पावन बंधन है।<br>
+                    मेरी प्यारी बुआ की शादी में, आप सभी का हार्दिक अभिनन्दन है!"
+                </blockquote>
+                <div class="bal-agrah-flower-divider">
+                    <span>✦</span> <span>✿</span> <span>✦</span>
+                </div>
+            </div>
+
+            <!-- FEATURED HIGHLIGHT CARD FOR DIVYA PANT (LADDU) -->
+            <div class="laddu-special-card">
+                <div class="laddu-avatar-badge">
+                    <div class="laddu-avatar-inner">
+                        👧
+                    </div>
+                </div>
+                <div class="laddu-tag">लाडली भतीजी की प्यारी मनुहार</div>
+                <h3 class="laddu-name">दिव्या पंत</h3>
+                <div class="laddu-subname">( लड्डू )</div>
+                <div class="laddu-quote">
+                    "मेरी प्यारी बुआ जी की शादी में आप सभी 'जलूल-जलूल' आना!" 💖✨
+                </div>
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--rani-deep); font-weight: 500; margin-top: 10px;">
+                ॥ स्नेहकांक्षी एवं बाल मनुहार: दिव्या पंत (लड्डू) एवं समस्त नन्हे-मुन्ने स्वजन ॥
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         HOSTS / NIVEDAK SECTION (निवेदक: श्रीमती मीना पंत एवं श्री मनोज पंत)
+         ============================================================ -->
+    <section class="hosts-section fade-in-up">
+
+        <div class="host-poetic-quote">
+            "आपका स्नेह एवं शुभाशीष ही हमारी सबसे बड़ी पूँजी है..."
+        </div>
+
+        <div class="nivedak-box">
+            <div class="nivedak-label">॥ निमंत्रक एवं निवेदक (वधू पक्ष) ॥</div>
+            <div class="nivedak-names">श्रीमती मीना पंत एवं श्री मनोज पंत</div>
+            <div class="nivedak-desc">
+                छीनी गोठ (टनकपुर) एवं खेतीखान, तल्ली बाज़ार <br>
+                समस्त पंत परिवार, कुटुंबीजन, रिश्तेदार एवं मित्रगण
+            </div>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+            <p style="font-size: 0.98rem; color: #fecdd3; margin-bottom: 16px;">
+                कृपया सपरिवार पधारकर कन्या तेजस्वी एवं वर नैनेश को अपना वात्सल्य व आशीर्वाद प्रदान करें।
+            </p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <button onclick="openWhatsAppRSVP()" class="whatsapp-rsvp-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.073.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.087.289.129.332.202.043.073.043.419-.101.824z" />
+                    </svg>
+                    <span>WhatsApp पर RSVP भेजें</span>
+                </button>
+                <button onclick="shareWeddingInvite()" class="btn-secondary"
+                    style="border-color: var(--gold-light); color: #fff; background: rgba(255,255,255,0.12);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="18" cy="5" r="3" />
+                        <circle cx="6" cy="12" r="3" />
+                        <circle cx="18" cy="19" r="3" />
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                    </svg>
+                    <span>कार्ड लिंक शेयर करें</span>
+                </button>
+            </div>
+        </div>
+
+        <div
+            style="font-size: 0.82rem; color: #fbcfe8; letter-spacing: 1px; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 16px;">
+            दर्शनाभिलाषी: समस्त पारिवारिक सदस्य, रिश्तेदार एवं स्नेहीजन
+        </div>
+    </section>
+
+    <!-- Traditional Aipan Bottom Border -->
+    <div class="aipan-border-bottom"></div>
+
+    <!-- ============================================================
+         STICKY BOTTOM MOBILE CONTROLLER BAR
+         ============================================================ -->
+    <nav class="mobile-bottom-bar">
+        <a href="#hero" class="mobile-bar-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            </svg>
+            <span>आरंभ</span>
+        </a>
+        <a href="#couple" class="mobile-bar-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+            <span>वधू-वर</span>
+        </a>
+        <a href="#rituals" class="mobile-bar-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <span>रस्में</span>
+        </a>
+        <a href="#venue" class="mobile-bar-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>स्थान</span>
+        </a>
+        <button class="mobile-bar-btn music-toggle-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18V5l12-2v13" />
+                <circle cx="6" cy="18" r="3" />
+                <circle cx="18" cy="16" r="3" />
+            </svg>
+            <span class="music-toggle-label">संगीत</span>
+        </button>
+        <a href="#" class="mobile-bar-btn open-card-modal-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+            </svg>
+            <span>कार्ड</span>
+        </a>
+    </nav>
+
+    <!-- ============================================================
+         MODAL 1: RITUAL DETAIL POPUP
+         ============================================================ -->
+    <div id="ritual-modal" class="modal-backdrop">
+        <div class="modal-content">
+            <button id="close-ritual-modal" class="modal-close-btn">&times;</button>
+
+            <div style="text-align: center; margin-bottom: 14px;">
+                <div style="font-size: 0.85rem; color: var(--gold-royal); letter-spacing: 2px;">॥ पावन मांगलिक रस्म ॥</div>
+                <h3 id="modal-ritual-title"
+                    style="font-family: var(--font-heading); color: var(--rani-deep); font-size: 1.65rem;">रस्म का नाम
+                </h3>
+            </div>
+
+            <div
+                style="background: var(--bg-creme-warm); border: 1px solid var(--rose-light); border-radius: 14px; padding: 14px; margin-bottom: 16px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.92rem;">
+                    <strong>📅 तिथि:</strong>
+                    <span id="modal-ritual-date" style="color: var(--rani-royal); font-weight: 600;">-</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.92rem;">
+                    <strong>⏰ समय:</strong>
+                    <span id="modal-ritual-time" style="color: var(--rani-royal); font-weight: 600;">-</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.92rem;">
+                    <strong>📍 स्थल:</strong>
+                    <span id="modal-ritual-venue" style="color: var(--rani-royal); font-weight: 600;">-</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.92rem;">
+                    <strong>🪔 मांगलिक स्वरूप:</strong>
+                    <span id="modal-ritual-dress" style="color: var(--rani-royal); font-weight: 600;">-</span>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 14px;">
+                <div id="modal-ritual-quote"
+                    style="font-family: var(--font-script); color: var(--rani-royal); font-size: 1.3rem;">""</div>
+            </div>
+
+            <p id="modal-ritual-desc"
+                style="font-size: 0.92rem; color: var(--text-dark); line-height: 1.7; margin-bottom: 20px; white-space: pre-line;">
+                रस्म का विस्तृत विवरण...
+            </p>
+
+            <div style="display: flex; gap: 10px;">
+                <button id="modal-ritual-calendar" class="btn-primary" style="flex: 1; justify-content: center;">
+                    <span>📅 Google Calendar में जोड़ें</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         MODAL 2: ORIGINAL CARD IMAGE VIEWER
+         ============================================================ -->
+    <div id="card-image-modal" class="modal-backdrop">
+        <div class="modal-content" style="max-width: 580px; text-align: center;">
+            <button id="close-card-modal" class="modal-close-btn">&times;</button>
+            <h3
+                style="font-family: var(--font-heading); color: var(--rani-deep); font-size: 1.4rem; margin-bottom: 12px;">
+                मूल शुभ विवाह निमंत्रण पत्र
+            </h3>
+            <img src="assets/wedding-card.png" alt="तेजस्वी एवं नैनेश विवाह निमंत्रण पत्र" class="card-modal-img">
+            <div style="margin-top: 16px; display: flex; justify-content: center; gap: 12px;">
+                <a href="assets/wedding-card.png" download="Tejaswi_Nainesh_Wedding_Card.png" class="btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>कार्ड डाउनलोड करें</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Synthesizer Script -->
+    <script src="js/audio.js"></script>
+    <!-- Core Application Logic -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
